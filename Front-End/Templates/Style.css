@@ -1,0 +1,41 @@
+body {
+  /*  font-family: Arial, sans-serif; */
+    text-align: center;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+h1, h2 {
+    color: #f7f7f7;
+}
+
+#form{ /* Seletor por ID (#) */
+    width: 300px; /* tamanho horizontal */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    padding: 8px; /* espaço interno */
+}
+
+button { /* Apliqua tudo que está aqui a TODOS os <button> da página*/
+    background-color: #007bff; /* fundo do elemento  */
+    color: white; /* Define a cor do texto dentro do botão  */
+    border: none; /* Remove a borda padrão do botão  */
+    padding: 10px; /* Define o espaço interno do botão */ 
+    cursor: pointer; /* Define o cursor do mouse quando passa sobre o botão  */
+}
+
+button:hover { /* quando o mouse passa por cima */
+    background-color: #0056b3;
+}
+
+
