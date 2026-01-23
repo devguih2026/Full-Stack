@@ -1,6 +1,6 @@
 
 from flask import Blueprint, request, jsonify
-from crud import NovoUsuario, MostrarUsuarios, RemoverUsuarios, AtualizarUsuarios
+from crud import NovoUsuario, MostrarUsuarios, RemoverUsuarios, AtualizarUsuarios, ValidarLogin
 
 projeto_bp = Blueprint("projeto_bp", __name__)
 
@@ -15,7 +15,7 @@ def NovoDado():
 
     return jsonify(chamar), 201
 
-@projeto_bp.route("/cadastro", methods=["GET"])
+@projeto_bp.route("/login", methods=["POST"])
 def VerDados():
     chamar = MostrarUsuarios()
     return jsonify(chamar), 200
@@ -31,3 +31,21 @@ def Atualizacao(id):
     nome = dados["nome"]
     chamar = AtualizarUsuarios(nome, id)
     return jsonify(chamar)
+
+@projeto_bp.route("/Logar", methods=["POST"])
+def Login():
+    dados = request.get_json()
+  
+    nome = dados.get("nome")
+    email = dados.get("email")
+
+    print("Nome:", nome)
+    print("Email:", email)
+
+    entrar = ValidarLogin(nome, email)
+
+    if not entrar:
+        return jsonify({"erro": "nome ou email incorreto"}), 401
+
+    return jsonify({"mensagem": "Login realizado com sucesso"}), 200
+""

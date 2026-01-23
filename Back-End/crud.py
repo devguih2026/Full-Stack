@@ -40,3 +40,16 @@ def AtualizarUsuarios(nome, id):
     conexao.close()
     return "Dados atualizados"
     
+def ValidarLogin(nome, email):
+    conexao = Conectar()
+    cursor = conexao.cursor(buffered=True)
+    query = """
+        SELECT nome
+        FROM usuario
+        WHERE nome = %s AND email = %s
+    """
+    cursor.execute(query, (nome, email))
+    resultado = cursor.fetchone()
+    cursor.close()
+    conexao.close()
+    return resultado

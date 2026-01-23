@@ -6,7 +6,7 @@ form.addEventListener("submit", function (event){
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
 
-    fetch("http://127.0.0.1:5000/login", {
+    fetch("http://127.0.0.1:5000/Logar", {
         method: "POST",
         headers: {
              "Content-Type": "application/json"
@@ -16,12 +16,23 @@ form.addEventListener("submit", function (event){
             email: email
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(err => {
+                throw err;
+            });
+        }
+        return response.json();
+    })
     .then(data => {
-        alert("Usuário Logado com sucesso!");
+        alert("Usuário logado com sucesso!");
         console.log(data);
+        // aqui futuramente: redirect, token, etc
     })
     .catch(error => {
-    console.error("Erro:", error);
+        alert(error.erro || "Nome ou email incorreto");
+        console.error(error);
     });
 });
+
+

@@ -4,7 +4,8 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.register_blueprint(projeto_bp)
 
