@@ -25,11 +25,13 @@ def ApagarDados(id):
     chamar = RemoverUsuarios(id) 
     return jsonify(chamar)
 
-@projeto_bp.route("/cadastro/usuario/<id>", methods=["PUT"])
-def Atualizacao(id):
+@projeto_bp.route("/Atualizar", methods=["PUT"])
+def Atualizacao():
+    
     dados = request.json
+    email = dados.get("email")
     nome = dados["nome"]
-    chamar = AtualizarUsuarios(nome, id)
+    chamar = AtualizarUsuarios(email, nome)
     return jsonify(chamar)
 
 @projeto_bp.route("/Logar", methods=["POST"])

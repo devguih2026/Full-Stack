@@ -30,11 +30,11 @@ def RemoverUsuarios(id):
     conexao.close()
     return "Query executada"
 
-def AtualizarUsuarios(nome, id):
+def AtualizarUsuarios(email, nome):
     conexao = Conectar()
     cursor = conexao.cursor()
-    query = "UPDATE usuario SET nome = %s WHERE id= %s"
-    cursor.execute(query, (nome, id))
+    query = "UPDATE usuario SET email = %s WHERE nome= %s"
+    cursor.execute(query, (email, nome))
     conexao.commit()
     cursor.close()
     conexao.close()

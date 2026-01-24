@@ -27,7 +27,7 @@ form.addEventListener("submit", function (event){
     .then(data => {
         alert("Usuário logado com sucesso!");
         console.log(data);
-        // aqui futuramente: redirect, token, etc
+    
     })
     .catch(error => {
         alert(error.erro || "Nome ou email incorreto");
