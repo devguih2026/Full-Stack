@@ -20,11 +20,11 @@ def MostrarUsuarios():
     print("Query executada")
     return resultado
 
-def RemoverUsuarios(id):
+def RemoverUsuarios(nome):
     conexao = Conectar()
     cursor = conexao.cursor(dictionary=True)
-    query = "DELETE FROM usuario WHERE id = %s"
-    cursor.execute(query, (id, ))
+    query = "DELETE FROM usuario WHERE nome = %s"
+    cursor.execute(query, (nome, ))
     conexao.commit()
     cursor.close()
     conexao.close()

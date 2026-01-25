@@ -20,10 +20,16 @@ def VerDados():
     chamar = MostrarUsuarios()
     return jsonify(chamar), 200
 
-@projeto_bp.route("/cadastro/usuario/<id>", methods=["DELETE"])
-def ApagarDados(id):
-    chamar = RemoverUsuarios(id) 
-    return jsonify(chamar)
+@projeto_bp.route("/Apagar", methods=["DELETE"])
+def ApagarDados():
+    
+    dados = request.get_json()
+    
+
+    nome = dados["nome"]
+    chamar = RemoverUsuarios(nome) 
+    # return jsonify(chamar)
+    return jsonify({"mensagem": "Usuário apagado"}), 200
 
 @projeto_bp.route("/Atualizar", methods=["PUT"])
 def Atualizacao():
