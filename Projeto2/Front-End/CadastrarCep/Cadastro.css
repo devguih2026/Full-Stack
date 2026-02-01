@@ -1,0 +1,66 @@
+
+body {
+  /*  font-family: Arial, sans-serif; */
+    text-align: center;
+
+    background-image: url("Finlândia.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+
+h1 {
+    color: #f1f0f0;
+}
+
+#form{ 
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    padding: 8px; 
+}
+
+button { 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.delete-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    color: darkred;
+    text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cadastro.css">
+    <title>Novo CEP</title>
+</head>
+<body>
+    <h1>Digite o CEP, a cidade e o estado</h1>
+<div class="form">
+       <form id="form">
+            <input
+                id="CEP"
+                type="text"
+                placeholder="Digite o CEP"
+                pattern="[0-9]{5}-[0-9]{3}"
+                required>
+        <input id="Cidade" type="text" placeholder="Cidade">
+        <input id="Estado" type="text" placeholder="Estado">
+        <button type="submit">Cadastrar</button>
+        </form>
+        
+</div>
+<script src="Cadastro.js"></script>
+</body>
+</html>

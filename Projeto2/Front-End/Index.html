@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Full-Stack usando SQLalchemy</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Faça sua busca, caso o CEP não seja encontrado você pode salvar ele no nosso banco</h1>
+<div class="Formulario">
+        <form id="form">
+            <input
+                id="CEP"
+                type="text"
+                placeholder="Digite o CEP"
+                pattern="[0-9]{5}-[0-9]{3}"
+                required>
+            <button type="submit">Buscar</button>
+            <div id="mensagem"></div>
+        </form>
+
+</div>
+
+<div class="Nav">
+    <p>Não encontrou nada?</p><a href="CadastrarCep/Cadastro.html">Cadastre no banco</a>
+</div>
+
+</body>
+
+<script src="Script.js"></script>
+</html>

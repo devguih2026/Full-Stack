@@ -1,9 +1,9 @@
 from flask import Flask
-from controller import projeto_bp
 from flask_cors import CORS
+from controller import projeto_bp
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app)  # <-- ESSENCIAL
 
 app.register_blueprint(projeto_bp)
 

@@ -1,0 +1,97 @@
+
+body {
+  /*  font-family: Arial, sans-serif; */
+    text-align: center;
+    background-image: url("beautiful-night-i9neq2ed7blcu74r.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+
+.Nav {
+    margin-top: 15px;   /* distância do botão */
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.Nav a {
+    color: black;
+    text-decoration: none; /* remove o sublinhado */
+    font-weight: bold;     /* opcional */
+}
+
+
+
+h1, h2 {
+    color: #f7f7f7;
+}
+
+#form{ 
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    padding: 8px; 
+}
+
+button { 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.delete-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sucesso {
+    color: rgb(248, 248, 248);
+}
+
+.erro {
+    color: rgb(255, 254, 254);
+}
+

@@ -27,7 +27,7 @@ def cadastrar_cep(cep, cidade, estado):
     session = SessionLocal()
 
     # Cria um novo objeto Cep, esse objeto ainda não está no banco
-    novo = Cep(cep=cep, # valor do CEP
+    novo = Cep(cep_codigo=cep, # valor do CEP
                cidade=cidade, # valor da cidade
                estado=estado) # valor do estado
     

@@ -1,0 +1,1 @@
+Projeto que usa HTML, CSS e Javascript puro junto com Python + SQLalchemy e MySQL com API para fazer uma página que busca um CEP e mostra exatamente à qual cidade e estado aquele CEP se refere
