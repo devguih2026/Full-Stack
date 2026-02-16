@@ -1,0 +1,124 @@
+/*  Estilização da tela de cadastro *//* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1e2b5c, #050814);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Container central */
+.container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centralizar títulos */
+.container h1,
+.container h2 {
+    text-align: center;
+}
+
+
+/* Container visual */
+body {
+    padding: 20px;
+}
+
+/* Card */
+form {
+    background: #0f0f14;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+}
+
+/* Títulos */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #b0b4d6;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #2d3cff;
+    background: #0b0b10;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input::placeholder {
+    color: #6c6f99;
+}
+
+form input:focus {
+    border-color: #5b6cff;
+    box-shadow: 0 0 0 2px rgba(91, 108, 255, 0.3);
+}
+
+/* Botão */
+form button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #5b6cff, #7a5cff);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 108, 255, 0.4);
+    opacity: 0.95;
+}
+
+/* Navegação inferior */
+.Nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #b0b4d6;
+}
+
+.Nav a {
+    color: #5b6cff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.Nav a:hover {
+    text-decoration: underline;
+}

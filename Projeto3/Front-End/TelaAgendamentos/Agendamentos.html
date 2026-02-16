@@ -1,0 +1,49 @@
+<!-- Tela que usuário vai escolher o serviço, a data e a hora-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos</title>
+    <link rel="stylesheet" href="Agendamentos.css">
+</head>
+<body>
+
+    <div class="container">
+    <h1>Agende seu horário</h1>
+
+    <form id="formAgendamento">
+
+        <div class="servicos">
+            <h3>Escolha os serviços:</h3>
+
+            <label>
+                <input type="checkbox" value="35" class="servico">
+                Corte de cabelo - R$ 35
+            </label>
+
+            <label>
+                <input type="checkbox" value="30" class="servico">
+                Barba - R$ 30
+            </label>
+
+            <label>
+                <input type="checkbox" value="10" class="servico">
+                Sobrancelha - R$ 10
+            </label>
+        </div>
+
+        <p class="total">Total: <span id="valorTotal">R$ 0</span></p>
+
+        <input type="date" id="data">
+        <input type="time" id="hora">
+
+        <button type="submit">Confirmar Agendamento</button>
+    </form>
+</div>
+
+
+<script src="Agendamentos.js"></script>
+</body>
+</html>
